@@ -69,7 +69,7 @@ var ReactS3Uploader = createReactClass({
 
     uploadFile: function() {
         this.myUploader = new S3Upload({
-            fileElement: ReactDOM.findDOMNode(this),
+            fileElement: this.props.inputRef.current,
             signingUrl: this.props.signingUrl,
             getSignedUrl: this.props.getSignedUrl,
             preprocess: this.props.preprocess,
@@ -94,7 +94,7 @@ var ReactS3Uploader = createReactClass({
     },
 
     clear: function() {
-        clearInputFile(ReactDOM.findDOMNode(this));
+        clearInputFile(this.props.inputRef.current);
     },
 
     render: function() {

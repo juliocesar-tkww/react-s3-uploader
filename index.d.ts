@@ -29,7 +29,7 @@ declare module 'react-s3-uploader' {
     uploadRequestHeaders?: object;
     contentDisposition?: string;
     server?: string;
-    inputRef?: RefObject<HTMLInputElement | null>;
+    inputRef: RefObject<HTMLInputElement | null>;
     autoUpload?: boolean;
     scrubFilename?: (filename: string) => string;
     [key: string]: any;
